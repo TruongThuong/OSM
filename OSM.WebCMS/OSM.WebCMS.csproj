@@ -1,62 +1,115 @@
-﻿<Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
-    <IsPackable>false</IsPackable>
-    <UserSecretsId>898ea892-6986-476f-b3f0-1f62e6924cac</UserSecretsId>
-    <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.6.0" />
-    <PackageReference Include="Autofac.Configuration" Version="4.0.1" />
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.1.0" />
-    <PackageReference Include="AutoMapper" Version="6.0.2" />
-    <PackageReference Include="BundlerMinifier.Core" Version="2.4.337" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="1.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.1.2" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <!-- Files not to show in IDE -->
-    <None Remove="yarn.lock" />
 
-    <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
-    <Content Remove="ClientApp\**" />
+  <ItemGroup>
+    <Content Include="Controllers\AccountController.cs" />
+    <Content Include="Controllers\HomeController.cs" />
+    <Content Include="Controllers\ProductCategoryController.cs" />
+    <Content Include="Controllers\ProductController.cs" />
+    <Content Include="Controllers\ProductJSONController.cs" />
+    <Content Include="Controllers\SampleDataController.cs" />
+    <Content Include="Infrastructure\Extenssions\EntityExtension.cs" />
+    <Content Include="Infrastructure\Extenssions\ResponseExtensions.cs" />
+    <Content Include="Infrastructure\Responses\IListModelResponse.cs" />
+    <Content Include="Infrastructure\Responses\IResponse.cs" />
+    <Content Include="Infrastructure\Responses\ISingleModelResponse.cs" />
+    <Content Include="Infrastructure\Responses\ListModelResponse.cs" />
+    <Content Include="Infrastructure\Responses\SingleModelResponse.cs" />
+    <Content Include="Mapping\AutoMapperConfiguration.cs" />
+    <Content Include="Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs" />
+    <Content Include="Models\AccountViewModels\ForgotPasswordViewModel.cs" />
+    <Content Include="Models\AccountViewModels\LoginViewModel.cs" />
+    <Content Include="Models\AccountViewModels\RegisterViewModel.cs" />
+    <Content Include="Models\AccountViewModels\ResetPasswordViewModel.cs" />
+    <Content Include="Models\AccountViewModels\SendCodeViewModel.cs" />
+    <Content Include="Models\AccountViewModels\VerifyCodeViewModel.cs" />
+    <Content Include="Models\ContactDetailViewModel.cs" />
+    <Content Include="Models\FeedbackViewModel.cs" />
+    <Content Include="Models\FooterViewModel.cs" />
+    <Content Include="Models\ManageViewModels\AddPhoneNumberViewModel.cs" />
+    <Content Include="Models\ManageViewModels\ChangePasswordViewModel.cs" />
+    <Content Include="Models\ManageViewModels\ConfigureTwoFactorViewModel.cs" />
+    <Content Include="Models\ManageViewModels\FactorViewModel.cs" />
+    <Content Include="Models\ManageViewModels\IndexViewModel.cs" />
+    <Content Include="Models\ManageViewModels\ManageLoginsViewModel.cs" />
+    <Content Include="Models\ManageViewModels\RemoveLoginViewModel.cs" />
+    <Content Include="Models\ManageViewModels\SetPasswordViewModel.cs" />
+    <Content Include="Models\ManageViewModels\VerifyPhoneNumberViewModel.cs" />
+    <Content Include="Models\OrderDetailViewModel.cs" />
+    <Content Include="Models\OrderViewModel.cs" />
+    <Content Include="Models\PageViewModel.cs" />
+    <Content Include="Models\PostCategoryViewModel.cs" />
+    <Content Include="Models\PostTagViewModel.cs" />
+    <Content Include="Models\PostViewModel.cs" />
+    <Content Include="Models\ProductCategoryViewModel.cs" />
+    <Content Include="Models\ProductTagViewModel.cs" />
+    <Content Include="Models\ProductViewModel.cs" />
+    <Content Include="Models\SlideViewModel.cs" />
+    <Content Include="Models\TagViewModel.cs" />
+    <Content Include="Controllers\AccountController.cs" />
+    <Content Include="Controllers\HomeController.cs" />
+    <Content Include="Controllers\ProductCategoryController.cs" />
+    <Content Include="Controllers\ProductController.cs" />
+    <Content Include="Controllers\ProductJSONController.cs" />
+    <Content Include="Controllers\SampleDataController.cs" />
+    <Content Include="Infrastructure\Extenssions\EntityExtension.cs" />
+    <Content Include="Infrastructure\Extenssions\ResponseExtensions.cs" />
+    <Content Include="Infrastructure\Responses\IListModelResponse.cs" />
+    <Content Include="Infrastructure\Responses\IResponse.cs" />
+    <Content Include="Infrastructure\Responses\ISingleModelResponse.cs" />
+    <Content Include="Infrastructure\Responses\ListModelResponse.cs" />
+    <Content Include="Infrastructure\Responses\SingleModelResponse.cs" />
+    <Content Include="Mapping\AutoMapperConfiguration.cs" />
+    <Content Include="Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs" />
+    <Content Include="Models\AccountViewModels\ForgotPasswordViewModel.cs" />
+    <Content Include="Models\AccountViewModels\LoginViewModel.cs" />
+    <Content Include="Models\AccountViewModels\RegisterViewModel.cs" />
+    <Content Include="Models\AccountViewModels\ResetPasswordViewModel.cs" />
+    <Content Include="Models\AccountViewModels\SendCodeViewModel.cs" />
+    <Content Include="Models\AccountViewModels\VerifyCodeViewModel.cs" />
+    <Content Include="Models\ContactDetailViewModel.cs" />
+    <Content Include="Models\FeedbackViewModel.cs" />
+    <Content Include="Models\FooterViewModel.cs" />
+    <Content Include="Models\ManageViewModels\AddPhoneNumberViewModel.cs" />
+    <Content Include="Models\ManageViewModels\ChangePasswordViewModel.cs" />
+    <Content Include="Models\ManageViewModels\ConfigureTwoFactorViewModel.cs" />
+    <Content Include="Models\ManageViewModels\FactorViewModel.cs" />
+    <Content Include="Models\ManageViewModels\IndexViewModel.cs" />
+    <Content Include="Models\ManageViewModels\ManageLoginsViewModel.cs" />
+    <Content Include="Models\ManageViewModels\RemoveLoginViewModel.cs" />
+    <Content Include="Models\ManageViewModels\SetPasswordViewModel.cs" />
+    <Content Include="Models\ManageViewModels\VerifyPhoneNumberViewModel.cs" />
+    <Content Include="Models\OrderDetailViewModel.cs" />
+    <Content Include="Models\OrderViewModel.cs" />
+    <Content Include="Models\PageViewModel.cs" />
+    <Content Include="Models\PostCategoryViewModel.cs" />
+    <Content Include="Models\PostTagViewModel.cs" />
+    <Content Include="Models\PostViewModel.cs" />
+    <Content Include="Models\ProductCategoryViewModel.cs" />
+    <Content Include="Models\ProductTagViewModel.cs" />
+    <Content Include="Models\ProductViewModel.cs" />
+    <Content Include="Models\SlideViewModel.cs" />
+    <Content Include="Models\TagViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App\" />
+    <Folder Include="Views\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Views\ProductJSON\index.cshtml" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OSM.Commom\OSM.Commom.csproj" />
+    <ProjectReference Include="..\OSM.Commom\OSM.Common.csproj" />
     <ProjectReference Include="..\OSM.Data\OSM.Data.csproj" />
     <ProjectReference Include="..\OSM.Model\OSM.Model.csproj" />
     <ProjectReference Include="..\OSM.Service\OSM.Service.csproj" />
   </ItemGroup>
-  <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
-    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
-    <Exec Command="npm install" />
-    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
-    <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
 
-    <!-- Include the newly-built files in the publish output -->
-    <ItemGroup>
-      <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
-        <RelativePath>%(DistFiles.Identity)</RelativePath>
-        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      </ResolvedFileToPublish>
-    </ItemGroup>
-  </Target>
 </Project>

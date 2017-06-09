@@ -1,14 +1,25 @@
 {
   "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "target": "es5",
     "sourceMap": true,
-    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipDefaultLibCheck": true,
-    "lib": [ "es6", "dom" ],
-    "types": [ "node" ]
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "rootDir": "App",
+    "outDir": "wwwroot/app"
   },
-  "exclude": [ "bin", "node_modules" ],
-  "atom": { "rewriteTsconfig": false }
+  "compileOnSave": true,
+  "angularCompilerOptions": {
+    "genDir": ".",
+    "debug": true
+  },
+
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+
 }

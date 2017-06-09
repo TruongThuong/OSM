@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OSM.Commom\OSM.Commom.csproj" />
+    <ProjectReference Include="..\OSM.Commom\OSM.Common.csproj" />
     <ProjectReference Include="..\OSM.Data\OSM.Data.csproj" />
     <ProjectReference Include="..\OSM.Model\OSM.Model.csproj" />
   </ItemGroup>
