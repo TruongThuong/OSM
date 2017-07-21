@@ -32,7 +32,7 @@ namespace OSM.Data
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
-
+ 
         public AppsDbContext(DbContextOptions options) : base(options)
         {
         }

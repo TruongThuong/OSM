@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSM.Model", "OSM.Model\OSM.Model.csproj", "{3938931D-3112-4FA1-A5B2-F6B894F91BC9}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSM.Service", "OSM.Service\OSM.Service.csproj", "{6602B3F4-09B6-4350-AAB1-A3ECD0D866BE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSM.Common", "OSM.Commom\OSM.Common.csproj", "{3E7B5932-4B3D-4A53-A574-A8646DA295A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSM.WebCMS", "OSM.Website\OSM.WebCMS.csproj", "{3DC7D638-6986-4EA0-80D0-4748D3C36C1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3E7B5932-4B3D-4A53-A574-A8646DA295A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E7B5932-4B3D-4A53-A574-A8646DA295A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E7B5932-4B3D-4A53-A574-A8646DA295A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC7D638-6986-4EA0-80D0-4748D3C36C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC7D638-6986-4EA0-80D0-4748D3C36C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC7D638-6986-4EA0-80D0-4748D3C36C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC7D638-6986-4EA0-80D0-4748D3C36C1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
